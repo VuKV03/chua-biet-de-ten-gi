@@ -1,0 +1,34 @@
+@Admin.Api_HostAddress = http://localhost:5043
+
+### Đăng nhập
+POST {{Admin.Api_HostAddress}}/api/auth/login
+Content-Type: application/json
+
+{
+  "taiKhoan": "admin",
+  "matKhau": "12345678aA@"
+}
+
+### Làm mới token (thay {{accessToken}} / {{refreshToken}} bằng giá trị nhận được từ login ở trên)
+POST {{Admin.Api_HostAddress}}/api/auth/refresh-token
+Content-Type: application/json
+
+{
+  "accessToken": "{{accessToken}}",
+  "refreshToken": "{{refreshToken}}"
+}
+
+### Thông tin user hiện tại (cần header Authorization: Bearer {{accessToken}})
+GET {{Admin.Api_HostAddress}}/api/auth/me
+Authorization: Bearer {{accessToken}}
+
+### Đăng xuất
+POST {{Admin.Api_HostAddress}}/api/auth/logout
+Content-Type: application/json
+Authorization: Bearer {{accessToken}}
+
+{
+  "refreshToken": "{{refreshToken}}"
+}
+
+###
