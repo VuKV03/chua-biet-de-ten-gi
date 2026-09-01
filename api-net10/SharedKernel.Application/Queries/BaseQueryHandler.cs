@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using SharedKernel.Application.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -8,7 +9,7 @@ using System.Text;
 namespace SharedKernel.Application.Queries
 {
     public class BaseQueryHandler<TDbContext, TEntity> // generic class (loại nào cũng được)
-        where TDbContext : DbContext
+        where TDbContext : IBaseDbContext
         where TEntity : class
     {
         // proctected + readonly: chỉ có thể truy cập trong lớp này và các lớp kế thừa (con) , và không thể thay đổi giá trị sau khi khởi tạo
