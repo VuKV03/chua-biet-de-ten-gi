@@ -9,6 +9,8 @@ namespace SharedKernel.Application.DTO
         public IReadOnlyList<T> items { get; set; } = []; // IReadOnlyList: Thuộc .net - Chỉ đọc không được sửa
                                                           // <T> là generic type parameter — tham số kiểu chung (mọi loại dl)
         public int totalCount { get; set; }
+        public int activeCount { get; set; }
+        public int completedCount { get; set; }
         public int page { get; set; }
         public int pageSize { get; set; }
         public int totalPages => pageSize <= 0 ? 0 : (int)Math.Ceiling((double)totalCount / pageSize);

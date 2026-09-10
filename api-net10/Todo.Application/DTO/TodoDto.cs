@@ -11,6 +11,7 @@ namespace Todo.Application.DTO
         public Guid id { get; set; }
         public string title { get; set; } = string.Empty; // = "" to avoid null reference
         public int status { get; set; }
+        
         public DateTime? completedAt { get; set; }
         public DateTime createdAt { get; set; }
         public DateTime updatedAt { get; set; }

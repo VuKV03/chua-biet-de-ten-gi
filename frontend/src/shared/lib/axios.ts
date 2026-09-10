@@ -1,0 +1,12 @@
+import axios from 'axios'
+
+const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI2MTQyNzQ1My03ODg1LTQ2MzctOWE5OS1lMTVhOTE2ODBkYjUiLCJpZCI6ImUwN2RiYzlmLWE1NGQtMTFmMS1hYzFmLWYwNGVhNDIwZDFmYSIsInRhaV9raG9hbiI6ImFkbWluIiwidGVuIjoiQWRtaW5pc3RyYXRvciIsImlzX3N1cGVyX2FkbWluIjoidHJ1ZSIsImVtYWlsIjoiYWRtaW5AZG9tYWluLmNvbSIsImRvbl92aV9pZCI6IiIsIm5iZiI6MTc4ODg4MTY2NiwiZXhwIjoxNzg4ODgzNDY2LCJpYXQiOjE3ODg4ODE2NjYsImlzcyI6Ik15QXV0aFNlcnZlciIsImF1ZCI6Ik15QXV0aENsaWVudCJ9.XnnyjwHIYLSUy5VQGoeXBIl0PcdGEdD0PVCRHmceuYc'
+
+const axiosInstance = axios.create({
+  baseURL: 'http://localhost:5100/api',
+  headers: {
+    Authorization: `Bearer ${token}`
+  }
+})
+
+export default axiosInstance
