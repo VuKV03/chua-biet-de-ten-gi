@@ -67,6 +67,11 @@ public static class ErrorCtr
             description = ex.Message
         };
     }
+
+    public static object ExtractErrorInfor(Exception ex)
+    {
+        throw new NotImplementedException();
+    }
 }
 
 public class ErrorInfo

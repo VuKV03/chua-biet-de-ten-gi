@@ -1,14 +1,22 @@
 <Solution>
-  <Folder Name="/Admin/">
-    <Project Path="Admin.Api/Admin.Api.csproj" />
-    <Project Path="Admin.Application/Admin.Application.csproj" />
-    <Project Path="Admin.Domain/Admin.Domain.csproj" />
-    <Project Path="Admin.Infrastructure/Admin.Infrastructure.csproj" />
-  </Folder>
   <Folder Name="/SharedKernel/">
-    <Project Path="SharedKernel.Api/SharedKernel.Api.csproj" />
-    <Project Path="SharedKernel.Application/SharedKernel.Application.csproj" />
     <Project Path="SharedKernel.Domain/SharedKernel.Domain.csproj" />
+    <Project Path="SharedKernel.Application/SharedKernel.Application.csproj" />
     <Project Path="SharedKernel.Infrastructure/SharedKernel.Infrastructure.csproj" />
+    <Project Path="SharedKernel.Api/SharedKernel.Api.csproj" />
+  </Folder>
+
+  <Folder Name="/Admin/">
+    <Project Path="Admin.Domain/Admin.Domain.csproj" />
+    <Project Path="Admin.Application/Admin.Application.csproj" />
+    <Project Path="Admin.Infrastructure/Admin.Infrastructure.csproj" />
+    <Project Path="Admin.Api/Admin.Api.csproj" />
+  </Folder>
+
+  <Folder Name="/Todo/">
+    <Project Path="Todo.Domain/Todo.Domain.csproj" />
+    <Project Path="Todo.Application/Todo.Application.csproj" />
+    <Project Path="Todo.Infrastructure/Todo.Infrastructure.csproj" />
+    <Project Path="Todo.Api/Todo.Api.csproj" />
   </Folder>
 </Solution>
